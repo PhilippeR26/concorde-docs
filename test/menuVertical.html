@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr">
+<head>
+
+<title>Menu déroulant vertical à plusieurs niveaux en DHTML</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <meta http-equiv="Content-Language" content="fr" />
+    <meta name="Robots" content="follow" />
+    <meta name="MSSmartTagsPreventParsing" content="TRUE" />
+
+<!-- script du menu -->
+<script type="text/javascript" src="dynMenu.js"></script>
+ <!-- détéction du navigateur -->
+<script type="text/javascript" src="browserdetect.js"></script>
+
+<!-- important pour que les vieux navigateurs ne comprennent pas le CSS 
+<link rel="stylesheet" type="text/css" href="menuv.css" title="default" media="screen" /> -->
+ <style type="text/css">
+    @import "menuv.css";
+
+</style>
+
+</head><body>
+<div id="contenu">
+  <p>A<img src="../Images/Check lists normales Concorde-menu.jpg" alt="" width="163" height="700" /></p>
+</div>
+
+<!-- liste imbriquée de liens qui fera office de menu -->
+<ul id="menu">
+    <li><a href="#menu1">menu 1</a>
+        <ul>
+            <li><a href="#">élément 1</a></li>
+            <li><a href="#">élément 2</a>
+                <ul>
+                    <li><a href="#">élément 1</a></li>
+                    <li><a href="#">élément 2</a></li>
+                    <li><a href="#">élément 3</a>
+                        <ul>
+                            <li><a href="#">élément 1</a></li>
+                            <li><a href="#">élément 2</a></li>
+                            <li><a href="#">élément 3</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">élément 1</a></li>
+            <li><a href="#">élément 3</a>
+                <ul>
+                    <li><a href="#">élément 1</a></li>
+                    <li><a href="#">élément 2</a></li>
+                    <li><a href="#">élément 3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li><a href="#menu2" >menu 2</a>	
+        <ul>
+            <li><a href="#">élément 1</a></li>
+            <li><a href="#">élément 2</a></li>
+            <li><a href="#">élément 3</a></li>
+        </ul>
+    </li>
+    <li><a href="#menu3" >menu 3</a>	
+        <ul>
+            <li><a href="#">élément 1</a></li>
+            <li><a href="#">élément 2</a></li>
+            <li><a href="#">élément 3</a></li>
+        </ul>
+    </li>
+</ul>
+
+<script type="text/javascript">
+    initMenu();
+</script>
+
+</body></html>

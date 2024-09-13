@@ -1,0 +1,87 @@
+body {
+	font: 11px verdana, sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #AFA99B;
+	background-image: url(../Images/Visiere.jpg);
+	background-repeat: repeat;
+	background-position: left top;
+}
+
+/* ------------------------------------------------------------------------------------
+Tha Drop-down Menu
+------------------------------------------------------------------------------------ */
+
+/* Elements de premier niveau
+--------------------------------------*/
+#menuDeroulant
+{
+	background: #6A6458;
+	width: 644px;
+	height: 21px;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#menuDeroulant li
+{
+	float: left;
+	width: 150px;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#menuDeroulant li a:link, #menuDeroulant li a:visited
+{
+	display: block;
+	height: 1%;
+	color: #FFF;
+	background: #3B4E77;
+	margin: 0;
+	padding: 4px 8px;
+	border-right: 1px solid #fff;
+	text-decoration: none;
+}
+#menuDeroulant li a:hover { background-color: #F2462E; }
+#menuDeroulant li a:active { background-color: #5F879D; }
+
+#menuDeroulant .sousMenu
+{
+	display: none;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+#menuDeroulant .sousMenu li
+{
+	float: none;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	width: 149px;
+	border-top: 1px solid transparent;
+	border-right: 1px solid transparent;
+}
+#menuDeroulant .sousMenu li a:link, #menuDeroulant .sousMenu li a:visited
+{
+	display: block;
+	color: #FFF;
+	margin: 0;
+	border: 0;
+	text-decoration: none;
+	background-color: transparent;
+	background-image: url(../Images/fondMenu.png);
+	background-repeat: repeat;
+}
+#menuDeroulant .sousMenu li a:hover
+{
+	background-image: none;
+	background-color: #F2462E;
+}
+
+#menuDeroulant li:hover > .sousMenu { display: block; }

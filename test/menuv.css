@@ -1,0 +1,95 @@
+/* CSS du menu vertical, bieler batiste */
+
+body{
+	margin-left:15em;
+	background-repeat: repeat;
+	background-color: #0000FF;
+    }
+
+.menu{
+	position:absolute;
+	/* solve a Opera7/IE display bug */
+    width:152px;
+	width/**/:150px;
+	margin:0;
+	padding:0;
+	border-top-width: 0px;
+	border-right-width: 0px;
+	border-bottom-width: 0px;
+	border-left-width: 0px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+    }
+    
+.menu span{
+    display:none;
+    }
+    
+.menu ul{
+	margin:0;
+	padding:0;
+	position:absolute; /* important */
+	width:152px;
+	width/**/:150px;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	border-bottom-style: none;
+    }
+    
+.menu li ul{
+    visibility:hidden;
+    }
+            
+.menu li ul{
+    margin-left:120px; /* be careful */
+    margin-top:-18px;
+    }
+    
+.menu a{
+	text-align:center;
+	color:#000;
+	text-weight:bold;
+	display:block;
+	width:150px;
+	border-bottom: 1px #000 solid;
+	text-decoration:none;
+	margin:0;
+	padding:3px 0 3px 0; /* em units can creat little graphic bug in mozilla */
+	background-image: url(../Images/fondMenu2.png);
+    }
+    
+.menu a:hover{
+    background-color: #aaf;
+    }
+    
+/* for a mozilla better display with key nav */
+.menu a:focus{
+    background-color: #aaf;
+}
+
+.menu span{
+    /* hide some accessibility stuff */
+    display:none;
+    }
+        
+.menu li{
+    width:150px;
+    display:block;    
+    float:left;  
+    list-style:none;
+    margin:0;
+    padding:0;
+    }
+    
+/* IE PC selector */
+* html .menu li {
+    display:inline; /* solve a IE PC list bug */
+    float:none; /* solve a IE5 clav nav bug */
+    }
+    
+a.linkOver{
+    background-color: #eee;
+    }
