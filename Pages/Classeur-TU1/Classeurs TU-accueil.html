@@ -32,6 +32,16 @@
 
 
 <!-----------les plugin----------------------->
+<script src="/Scripts/jquery.js"></script>
+  <script>
+    $(function () {
+      $("#menuContent").load("/Templates/indexMenu.html");
+    });
+    $(function () {
+      $("#banner").load("/Templates/banner.html");
+    });
+  </script>
+
 <script type="text/javascript" src="/Scripts/dynMenu.js"></script>
  <!-- détéction du navigateur -->
 <script type="text/javascript" src="/Scripts/browserdetect.js"></script>
@@ -263,115 +273,11 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
 <!-- InstanceBeginEditable name="ZoneTitre" --><font color="#FFFFFF" style="font-family:Arial;font-size:12pt;font-weight:bold;text-decoration:none;">Classeurs TU</font><!-- InstanceEndEditable -->
 </div>
 
-<!-- Bandeau -->
-<div id='obj_13' style='position:absolute; left:0px; top:0px; width:960px; height:76px; z-index:7'><img src="/Templates/image_058.jpg" alt="Photo Javier Guerrero" width="960" height="76"></div>
-
+<!-- Bandeau supérieur -->
+<div id="banner"></div>
 <!-- Menu -->
-<div id="apDiv1" style='position:absolute; left:0px; top:79px; width:161px; height:700px; z-index:5; overflow:visible;'>
-  <p align="left"><br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-  
-<ul id="menu">
-    <li><a href="../../index.php">Accueil</a>
-    <li><a href="../CLprototype001/DocsBordProtos.html">Les premiers Concorde<br>
-    </a>
-      <ul>
-            <li><a href="../CLprototype001/Concorde%20check-list%20prototype%20001_accueil.html">Check-list proto 001</a></li>
-            <li><a href="../Elec201/Concorde201-elec-accueil.html">Manuel électrique <br>1er avion série 201</a></li>
-            <li><a href="../ManuelVol201/ManuelVol201-Accueil.html">Manuel de vol<br>1er avion série 201</a></li>
-      </ul>
-    </li>
-    <li><a href="../CLprototype001/Check-lists%20generalites_267.html" >Les check-list <br>Air France</a>	
-      <ul>
-            <li><a href="../CL-AF/Concorde-CL-normales-lecture.html">Check-list Normales</a></li>
-            <li><a href="../CL-secours/Concorde-Check-list%20secours%20AF-accueil.html">Check-list Secours</a></li>
-            <li><a href="../CL-urgence/Concorde-Check-list%20urgence%20AF-accueil.html">Check-list Urgence</a></li>
-            <li><a href="../CL-QRH/CL-QRH-accueil.html">Check-list QRH</a></li>
-      </ul>
-    </li>
-    <li><a href="Classeurs%20TU-accueil.html" >Classeurs TU <br>
-      Air France </a>	
-      <ul>
-            <li><a href="ClasseursTU1-accueil.html">Classeur TU 1</a></li>
-            <li><a href="../Classeur-TU2A/Classeur%20TU2A-accueil.html">Classeur TU 2A </a></li>
-            <li><a href="../Classeur-TU2B/Classeur%20TU2B-accueil.html">Classeur TU 2B </a></li>
-            <li><a href="../TUreduite/TUreduite-accueil.html">Classeur TU réduite</a></li>
-      </ul>
-    </li>
-    <li><a href="../Classeur-ATI/Formation.html" >Formations pilotes</a>	 
-  <ul>
-            <li><a href="../Classeur-ATI/ClasseurATI-accueil.html">Classeur ATI</a></li>
-            <li><a href="../Classeur-ATI/CoursSimul-Accueil.html">Formation simulateur</a></li>
-            <li><a href="../FormationAero/FormationAeroAccueil.html">Formation aérodynamique</a></li>
-            <li><a href="../FormatQualifQuest/QuestionQualif.html">Questionnaire de qualification</a></li>
-      </ul>
-    </li>
-    <li><a href="../FormMeca/FormationMecanos.html" >Formations mécanos</a>	
-  <ul>
-            <li><a href="../FormMeca/FormMecaATA22-3-page01.html">Formation ATA22 commandes de vol automatiques</a></li>
-      </ul>
-    </li>
-    <li><a href="../Carton-A-D/Concorde-Procedures.html" >Préparation des vols</a>	
-  <ul>
-            <li><a href="../ProceduresSolAF/PG-K-46.30/Concorde-Proc46-30-page01.html">Procédure <br>PG-K-46.30 Traitement avion</a></li>
-            <li><a href="../ProceduresSolAF/PG-K-46.32/Concorde-Proc46-32-page01.html">Procédure <br>PG-K-46.32 Chargement/centrage</a></li>
-            <li><a href="../Carton-A-D/carton_decollage_atterrissage_465.html">Carton décollage/ atterrissage Air France</a></li>
-            <li><a href="../Carton-A-D/FormulairePreparationDeVol.html">Formulaire préparation de vol</a></li>
-            <li><a href="../Carton-A-D/ReducBruitCDG.html">Tableau réduction <br> de bruit Paris CDG</a></li>
-            <li><a href="../Carton-A-D/FeuilleCentrage-page01.html">Formulaire feuille <br> de centrage</a></li>
-            <li><a href="../Carton-A-D/OrdreDePleins.html">Formulaire ordre <br>
-        de pleins</a></li>
-      </ul>
-    </li>
-    <li><a href="../Sacoche-SSC-petite/Concorde-Sacoches%20SSC%20Air%20France.html" >Sacoches Air France</a>	
-  <ul>
-            <li><a href="../Sacoche-cuir-grande/Concorde-Sacoche_cuir.html">Grande sacoche cuir</a></li>
-            <li><a href="../Sacoche-SSC-grande/Concorde-Grande%20sacoche%20SSC.html">Grande sacoche SSC</a></li>
-            <li><a href="../Sacoche-SSC-petite/Concorde-Petite%20sacoche%20SSC%20Air%20France.html">Petite sacoche SSC</a></li>
-      </ul>
-    </li>
-    <li><a href="../Cartes/Navigation-accueil.html" >Navigation aérienne</a>	
-  <ul>
-            <li><a href="../RegleCarbu/Concorde%20regle%20carbu%2001.html">Règle de calcul de suivi carburant</a></li>
-        <li><a href="../Cartes/SuiviVol-page1.html">Formulaire générique de suivi de vol</a></li>
-        <li><a href="../Cartes/Carte2SSC.html">Carte 2SSC <br>
-        La manche</a></li>
-        <li><a href="../Cartes/Carte4SSC.html">Carte 4SSC <br>
-        Boucle supersonique</a></li>
-        <li><a href="../Cartes/SuiviVolBoucleSuper.html">Formulaire suivi de vol boucle supersonique</a></li>
-        <li><a href="../Cartes/TerrainCDG-page01.html">Infos Concorde pour le terrain Paris CDG</a></li>
-        <li><a href="../Cartes/TerrainKJFK01-page01.html">Infos Concorde pour le terrain <br>
-        New York JFK</a></li>
-      </ul>
-    </li>
-    <li><a href="../PNC/PNC.html" >Documents PNC </a>	
-  <ul>
-            <li><a href="../PNC/CSbraille/CSbraille-page01.html">Consignes de sécurité en braille</a></li>
-        <li><a href="../PNC/MSS/MSS-page01.html">Manuel sécurité sauvetage MSS</a></li>
-        <li><a href="../Menu/Menu-accueil.html">Menu Concorde </a></li>
-        <li><a href="../Consignes-secu/Concorde-Consignes%20secu%20AF.html">Consignes de sécurité</a></li>
-      </ul>
-    </li>
-    <li><a href="../SpecTech/GeneseConcorde.html" >Génèse Concorde </a>	
-  <ul>
-            <li><a href="../SpecTech/SpecTechAccueil.html">Specification <br>
-        technique 1968 <br></a></li>
-            <li><a href="../SpecTech/VolEssaiJFK.html">Essais à <br>
-        New york 1977 <br></a></li>
-      </ul>
-    </li>
-    <li><a href="../Divers/Lecture/lecture.html" >Lecture <br>
-    </a>    </li>
-    <li><a href="../Divers/liens.html" >Liens <br>
-    </a>    </li>
-    <li><a href="../Divers/Contact.html" >Contact</a></li>
-</ul>
+<div id="menuContent"></div>
 
-</div>
-<script type="text/javascript">
-    initMenu();
-</script>
-
-<!-- InstanceEnd --></html>
+</html>
 
 
