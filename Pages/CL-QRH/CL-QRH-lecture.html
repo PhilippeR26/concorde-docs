@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <title>CONCORDE - Check list et documentation des équipages</title>
+  <meta name="description" content="Consultez la documentation technique du Concorde.">
+  <meta name="keywords"
+    content="concorde, documentation, technique, check-list, check list, check-lists, check lists, pilote, pilot, crew, équipage, prototype, formation, training, TU, ATI, air france, british airways, collectionneur, collection, carte, navigation, manuel, PNC, PNT">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8; iso-8859-1">
+  <link rel="shortcut icon" href="http://concorde.docs.free.fr/favicon.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <META NAME="description" CONTENT="Tous les détails sur la documentation des équipages des avions Concorde.">
+  <META NAME="keywords"
+    CONTENT="concorde, check-list, documentation, pilote, prototype, équipage, aérospatiale, BAE, Sud aviation, aéronautique, TU, ATI">
+  <META NAME="subject" CONTENT="Description détaillées de la documentation des équipages du Concorde">
+  <META NAME="author" CONTENT="PhilippeR">
+  <META NAME="copyright" CONTENT="© 2008-2024 PhilippeR">
+  <META NAME="revisit-after" CONTENT="30">
+  <META NAME="identifier-url" CONTENT="http://concorde.docs.free.fr">
+  <META NAME="reply-to" CONTENT="concorde.docs@free.fr">
+  <META NAME="date-creation-ddmmyyyy" CONTENT="21082007">
+  <META NAME="Robots" CONTENT="all">
+  <META NAME="Rating" CONTENT="general">
+  <META NAME="organization" CONTENT="PhilippeR">
+  <META http-equiv="Content-Language" CONTENT="Fr">
+  <META NAME="expires" CONTENT="never">
+  <META NAME="Distribution" CONTENT="Global">
+  <META NAME="Audience" CONTENT="general">
+  <meta name="verify-v1" content="2O97aXNHSVDYbhOzGZalud38DNa9Q/WUTLdWinzCS2M=" />
+
+  <script src="/Scripts/jquery.js"></script>
+  <script>
+    $(function () {
+      $("#menuContent").load("/Templates/indexMenu.html");
+    });
+    $(function () {
+      $("#banner").load("/Templates/banner.html");
+    });
+  </script>
+
+  <link rel="stylesheet" href="/Templates/site.css">
+  <link rel="preload" href="/Sons/Conc2kafcs_on.wav" as="audio">
+
+  <script src="/Scripts/exploreButtons.js"></script>
+  <script>
+    function play() { // son 'click' lors de l'appui d'un bouton de page
+      var audio = new Audio('/Sons/Conc2kafcs_on.wav');
+      audio.play();
+    }
+  </script>
+
+  <style type="text/css">
+    .buttext {
+      /*texte des boutons de changement de page*/
+      color: black;
+      text-align: center;
+      font-family: verdana;
+      font-size: 9px;
+      font-weight: bolder;
+    }
+  </style>
+</head>
+
+<script>
+  // ********* width of the document area ********
+  const largeur = 1200;
+  // ********* url of root ********
+  const sommaireUrl = '/Pages/CL-QRH/CL-QRH-accueil.html';
+  // ********* base url for images *********
+  const baseUrl="Images/QRH-";
+  // ******** Number of pages to display ******
+  const pageMax = 112;
+</script>
+
+<div id='mainArea'
+  style='position:absolute; left:182px; top:116px; width:1000px; height:900px; z-index:1; overflow:visible;'>
+  <!--Barre horizontale de boutons-->
+  <div style="position:relative; width:1000px; height:45px">
+    <!--bouton 1 : 1ere page-->
+    <div id="bouton_prem" style="position:absolute;top:0px;left:0px; z-index:1">
+      <img id="butt1" src="/Images/Bouton2.jpg">
+      <div class="buttext" style="position:absolute; top:4px;left:0px; width:98px; height:31px; z-index:2;">
+        &nbsp;&nbsp;&nbsp;&nbsp;PREMIERE&nbsp;&nbsp;&nbsp;&nbsp;
+        PAGE
+      </div>
+      <div
+        style="position:absolute;top:0px; left:0px;width:98px; height:31px; z-index:3;font-size:100%;background-color: white; opacity: 0.01;"
+        onclick="
+          play();
+          pageCur=1;
+          console.log('PageCur=' , pageCur);
+          updatePage3images(baseUrl);
+        " onmouseenter="document.getElementById('butt1').src='/Images/Bouton2illum.jpg';"
+        onmouseout="document.getElementById('butt1').src='/Images/Bouton2.jpg';">
+      </div>
+    </div>
+
+    <!--bouton 2 : page precedente-->
+    <div id="bouton_prec" style="position:absolute;top:0px;left:200px;z-index:1">
+      <img id="butt2" src="/Images/Bouton2.jpg">
+      <div class="buttext" style="position:absolute; top:4px; width:98px; height:31px; z-index:2;">
+        &nbsp;&nbsp;&nbsp;&nbsp;PAGE&nbsp;&nbsp;&nbsp;&nbsp;
+        PRECEDENTE
+      </div>
+      <div
+        style="position:absolute;top:0px; width:98px; height:31px; z-index:3;font-size:100%;background-color: white; opacity: 0.01;"
+        onclick="
+          play();
+          pageCur--;
+          console.log('PageCur=' , pageCur);
+          updatePage3images(baseUrl);
+    " onmouseenter="document.getElementById('butt2').src='/Images/Bouton2illum.jpg';"
+        onmouseout="document.getElementById('butt2').src='/Images/Bouton2.jpg';">
+      </div>
+    </div>
+
+    <!--bouton 3 : page suivante-->
+    <div id="bouton_suiv" style="position:absolute;top:0px;left:400px; z-index:1">
+      <img id="butt3" src="/Images/Bouton2.jpg">
+      <div class="buttext" style="position:absolute; top:4px; width:98px; height:31px; z-index:2;">
+        &nbsp;&nbsp;&nbsp;&nbsp;PAGE&nbsp;&nbsp;&nbsp;&nbsp;
+        SUIVANTE
+      </div>
+      <div
+        style="position:absolute;top:0px; width:98px; height:31px; z-index:3;font-size:100%;background-color: white; opacity: 0.01;"
+        onclick="
+      play();
+      pageCur++;
+      console.log('PageCur=' , pageCur);
+      updatePage3images(baseUrl);
+    " onmouseenter="document.getElementById('butt3').src='/Images/Bouton2illum.jpg';"
+        onmouseout="document.getElementById('butt3').src='/Images/Bouton2.jpg';">
+      </div>
+    </div>
+
+    <!--bouton 4 : dernière page -->
+    <div id="bouton_der" style="position:absolute;top:0px;left:600px; z-index:1">
+      <img id="butt4" src="/Images/Bouton2.jpg">
+      <div class="buttext" style="position:absolute; top:4px; width:98px; height:31px; z-index:2;">
+        &nbsp;&nbsp;&nbsp;&nbsp;DERNIERE&nbsp;&nbsp;&nbsp;&nbsp;
+        PAGE
+      </div>
+      <div
+        style="position:absolute;top:0px; width:98px; height:31px; z-index:3;font-size:100%;background-color: white; opacity: 0.01;"
+        onclick="
+          play();
+          pageCur=pageMax;
+          console.log('===PageCur=' , pageCur);
+          updatePage3images(baseUrl);
+    " onmouseenter="document.getElementById('butt4').src='/Images/Bouton2illum.jpg';"
+        onmouseout="document.getElementById('butt4').src='/Images/Bouton2.jpg';">
+      </div>
+    </div>
+
+    <!--bouton 5 : sommaire-->
+    <div id="bouton_som" style="position:absolute;top:0px;left:800px; z-index:1">
+      <img id="butt5" src="/Images/Bouton2.jpg">
+      <div class="buttext" style="position:absolute; top:10px; width:98px; height:31px; z-index:2;">
+        &nbsp;&nbsp;&nbsp;&nbsp;SOMMAIRE&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+      <div
+        style="position:absolute;top:0px; width:98px; height:31px; z-index:3;font-size:100%;background-color: white; opacity: 0.01;"
+        onclick="
+          play();
+          window.location.href=sommaireUrl;
+      " onmouseenter="document.getElementById('butt5').src='/Images/Bouton2illum.jpg'"
+        onmouseout="document.getElementById('butt5').src='/Images/Bouton2.jpg'">
+      </div>
+    </div>
+
+
+  </div>
+  <img src="/Images/Large1482.jpg" width="1350" height="6">
+
+  <P align=center>&nbsp;<!-- InstanceEndEditable -->
+    <img id="image1" src="" style='top:50px;'>
+    <img id="image1b" src="" style='top:50px;'>
+    <img id="image2" src="" style='top:50px;'>
+
+    &nbsp;&nbsp;&nbsp;
+  <P align=center>&nbsp; </P>
+
+  <!-- InstanceEndEditable -->
+</div>
+
+<!-- Titre -->
+<div id='obj_10'
+  style='position:absolute; left:182px; top:79px; width:800px; height:20px; z-index:5; overflow:visible;'>
+  <font color="#FFFFFF" style="font-family:Arial;font-size:12pt;font-weight:bold;text-decoration:none;">
+    <!-- ******** Titre de la page ******** -->
+    Concorde - Check-list QRH - page <span id="titreHaut">1</span>
+  </font>
+
+  <script type="text/javascript">
+    const urlEnd = window.location.search;
+    const params = new URLSearchParams(urlEnd);
+    var pageCur = Number(params.get('page'));
+
+
+    updatePage3images(baseUrl);
+    document.getElementById('mainArea').style = 'position:absolute; left:182px; top:116px; width:' + largeur.toString() + 'px; height:900px; z-index:1; overflow:visible;'
+  </script>
+</div>
+
+<!-- Bandeau supérieur -->
+<div id="banner"></div>
+<!-- Menu -->
+<div id="menuContent"></div>
+
+</html>
