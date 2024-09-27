@@ -1,11 +1,7 @@
-
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html><!-- InstanceBegin template="/Templates/PageRacine.dwt" codeOutsideHTMLIsLocked="false" -->
+<!DOCTYPE HTML">
+<html>
 <head>
-<!-- InstanceBeginEditable name="doctitle" -->
 <title>CONCORDE - Check list et documentation des équipages</title>
-<!-- InstanceEndEditable -->
 <meta name="description" content="Consultez la documentation technique du Concorde.">
 <meta name="keywords" content="concorde, documentation, technique, check-list, check list, check-lists, check lists, pilote, pilot, crew, équipage, prototype, formation, training, TU, ATI, air france, british airways, collectionneur, collection, carte, navigation, manuel, PNC, PNT">
 
@@ -32,193 +28,21 @@
 
 
 <!-----------les plugin----------------------->
-<script type="text/javascript" src="/dynMenu.js"></script>
- <!-- détéction du navigateur -->
-<script type="text/javascript" src="/browserdetect.js"></script>
+<script src="/Scripts/jquery.js"></script>
+  <script>
+    $(function () {
+      $("#menuContent").load("/Templates/indexMenu.html");
+    });
+    $(function () {
+      $("#banner").load("/Templates/banner.html");
+    });
+  </script>
 
-
-<style type="text/css">
-
-
-td {
-	color:#333333;
-	font-family:Verdana, Arial, Helvetica, sans-serif;
-	font-size:9pt;
-	text-decoration:none;
-}
-body {background-color:#1E435E;background-image: url();}
-.champ {color: #000000;font-family:Arial;font-size:9pt;text-decoration:none;background-color: #FFFFFF;border: 1px solid #000000;}
-
-Edition{color:#000000;background-color:#FFFFFF;font-family:Arial;font-size:9pt;text-decoration:none;}
-#apDiv1 {
-	position:absolute;
-	left:1px;
-	top:77px;
-	width:161px;
-	height:703px;
-	z-index:100001;
-	background-image: url(../../Images/Check%20lists%20normales%20Concorde-menu.jpg);
-	visibility: visible;
-}
-.menug {
-	color: #333333;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 9px;
-
-}
-.StyleL {
-	color: #CCCCCC;
-	font-size: 14px;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-.Style1 {font-size: 9pt}
-
- #menu{
-	position:absolute;
-	/* solve a Opera7/IE display bug */
-    width:72px;
-	width/**/:105px;
-	margin:0;
-	padding:0;
-	border-top-width: 0px;
-	border-right-width: 0px;
-	border-bottom-width: 0px;
-	border-left-width: 0px;
-	border-top-style: none;
-	border-right-style: solid;
-	border-bottom-style: none;
-	border-left-style: none;
-	left: 44px;
-	height: 80px;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 10px;
-	color: #333333;
-    }
-    
-#menu span{
-    display:none;
-    }
-    
-#menu ul{
-	margin:0;
-	padding:0;
-	position:absolute; /* important */
-	width:72px;
-	width/**/:60px;
-	border-top-style: none;
-	border-right-style: none;
-	border-left-style: none;
-	border-bottom-style: none;
-    }
-    
-#menu li ul{
-    visibility:hidden;
-    }
-            
-#menu li ul{
-    margin-left:88px; /* be careful */
-    margin-top:-18px;
-    }
-    
-#menu a{
-	text-align:center;
-	color:#000;
-	font-weight:bold;
-	display:block;
-	width:105px;
-	border-bottom: 1px #000 solid;
-	text-decoration:none;
-	margin:0;
-	padding:3px 0 3px 0; /* em units can creat little graphic bug in mozilla */
-	background-image: url(../../Images/fondMenu2.png);
-    }
-    
-#menu a:hover{
-    background-color: #aaf;
-    }
-    
-/* for a mozilla better display with key nav */
-#menu a:focus{
-    background-color: #aaf;
-}
-
-#menu span{
-    /* hide some accessibility stuff */
-    display:none;
-    }
-        
-#menu li{
-    width:70px;
-    display:block;    
-    float:left;  
-    list-style:none;
-    margin:0;
-    padding:0;
-    }
-    
-/* IE PC selector */
-* html #menu li {
-    display:inline; /* solve a IE PC list bug */
-    float:none; /* solve a IE5 clav nav bug */
-    }
-    
-a.linkOver{
-    background-color: #88e;
-    }
-
-
-
-</style>
-
-<script type="text/javascript">
-function MM_CheckFlashVersion(reqVerStr,msg){
-  with(navigator){
-    var isIE  = (appVersion.indexOf("MSIE") != -1 && userAgent.indexOf("Opera") == -1);
-    var isWin = (appVersion.toLowerCase().indexOf("win") != -1);
-    if (!isIE || !isWin){  
-      var flashVer = -1;
-      if (plugins && plugins.length > 0){
-        var desc = plugins["Shockwave Flash"] ? plugins["Shockwave Flash"].description : "";
-        desc = plugins["Shockwave Flash 2.0"] ? plugins["Shockwave Flash 2.0"].description : desc;
-        if (desc == "") flashVer = -1;
-        else{
-          var descArr = desc.split(" ");
-          var tempArrMajor = descArr[2].split(".");
-          var verMajor = tempArrMajor[0];
-          var tempArrMinor = (descArr[3] != "") ? descArr[3].split("r") : descArr[4].split("r");
-          var verMinor = (tempArrMinor[1] > 0) ? tempArrMinor[1] : 0;
-          flashVer =  parseFloat(verMajor + "." + verMinor);
-        }
-      }
-      // WebTV has Flash Player 4 or lower -- too low for video
-      else if (userAgent.toLowerCase().indexOf("webtv") != -1) flashVer = 4.0;
-
-      var verArr = reqVerStr.split(",");
-      var reqVer = parseFloat(verArr[0] + "." + verArr[2]);
-  
-      if (flashVer < reqVer){
-        if (confirm(msg))
-          window.location = "http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash";
-      }
-    }
-  } 
-}
-</script>
-<script src="Scripts/AC_RunActiveContent.js" type="text/javascript"></script>
-
-
-
-
-<!-- InstanceBeginEditable name="head" -->
-<style type="text/css">
-</style>
-<!-- InstanceEndEditable -->
+  <link rel="stylesheet" href="/Templates/site.css">
 </head>
 
 
-
 <div id='obj_3' style='position:absolute; left:182px; top:116px; width:854px; height:464px; z-index:1; overflow:visible;'>
-
 
 
 <!--ACTUA15|||||||||||||||-->
@@ -243,29 +67,19 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
     <a href="http://www.af001.com/" target=_blank><img src="Images/AF001.jpg" width="398" height="300" border="0"></a><br>
     <FONT color=#cccccc><span class="Style30 Style30 Style30">AF001 : Gros <FONT color=#cccccc>forum Français sur le Concorde. </FONT></span></FONT>&nbsp;</P>
 <P align=center class="StyleL Style30 Style30 Style30">&nbsp;</P>
-<P align=center class="StyleL Style30 Style30 Style30"><FONT color=#cccccc><A href="http://assovirtuailes.free.fr/" target=_blank class="StyleL Style30"><U>http://assovirtuailes.free.fr</U></A></FONT><br>
-  <a href="http://assovirtuailes.free.fr/" target=_blank><img src="Images/VirtuAiles.jpg" width="453" height="300" border="0"></a><font color=#cccccc><br>
-  Virtuailes : association Toulousaine qui remet en état le simulateur de vol Concorde Air France <br>
-  (mon coup de coeur).&nbsp;</font></P>
-<P align=center class="StyleL Style30 Style30 Style30">&nbsp;</P>
+
 <P align=center class="StyleL Style30 Style30 Style30"><FONT color=#cccccc><A href="http://www.salon-de-l-aviation.com/" target=_blank class="StyleL Style30"><U>http://www.salon-de-l-aviation.com</U></A></FONT><br>
   <a href="http://www.salon-de-l-aviation.com/" target=_blank><img src="Images/Salon.jpg" width="354" height="300" border="0"></a><br>
   <FONT color=#cccccc>Salon de l'aviation : Historique Concorde, check-list urgences, vol virtuel à ne pas manquer.&nbsp;</FONT></P>
-<P align=center class="StyleL Style30 Style30 Style30">&nbsp;</P>
-<P align=center class="StyleL Style30 Style30 Style30"><FONT color=#cccccc><FONT color=#cccccc><A href="http://caea.free.fr/" target=_blank class="StyleL Style30"><U>http://caea.free.fr</U></A></FONT></FONT><br>
-  <a href="http://caea.free.fr/" target=_blank><img src="Images/Consevatoire.jpg" width="500" height="172" border="0" ></a><FONT color=#cccccc><br>
-    Conservatoire de l'air et de l'espace d'aquitaine, un beau musée.</FONT></P>
 <P align=center class="StyleL Style30 Style30 Style30">&nbsp;</P>
 <P align=center class="StyleL Style30 Style30 Style30"><FONT color=#cccccc><a name="M2"></a><FONT face=Verdana color=#cccccc><A href="http://mach2.concorde.free.fr" target=_blank class="StyleL Style30"><U>http://mach2.concorde.free.fr </U></A></FONT></FONT><br>
     <a href="http://mach2.concorde.free.fr" target=_blank><img src="Images/Csite.jpg" width="453" height="300" border="0"></a><br>
     <FONT color=#cccccc>Vivez un aller / retour Paris-New York.</FONT><FONT color=#cccccc><BR>
     &nbsp;</FONT></P>
-<P align=center class="StyleL Style30 Style30 Style30"><FONT color=#cccccc><FONT color=#cccccc><A href="http://www.sstsim.com/" target=_blank class="StyleL Style30"><U>http://www.sstsim.com</U></A></FONT></FONT><br>
-    <a href="http://www.sstsim.com/" target=_blank><img src="Images/SSTSIM.jpg" width="281" height="300" border="0"></a><br>
-    <FONT color=#cccccc>Pilotez Concorde avec le meilleur module additionnel pour Microsoft Flight Simulator.</FONT></P>
+
 <P align=center class="StyleL Style30 Style30 Style30"><FONT color=#cccccc><BR>
-      </FONT><FONT color=#cccccc><A href="http://museedelta.free.fr/" target=_blank class="StyleL"><U><span class="Style30">http://museedelta.free.fr</span></U></A></FONT><br>
-        <a href="http://museedelta.free.fr/" target="_blank"><img src="Images/delta.jpg" width="500" height="226" border="0"></a><br>
+      </FONT><FONT color=#cccccc><A href="https://museedelta.wixsite.com/musee-delta/" target=_blank class="StyleL"><U><span class="Style30">https://museedelta.wixsite.com/musee-delta</span></U></FONT><br>
+        <img src="Images/delta.jpg" width="500" height="226" border="0"></a><br>
         <FONT color=#cccccc>Musée Delta : tout est dans le nom.&nbsp;</FONT></P>
 <P align=center class="StyleL"><FONT color=#cccccc><BR>
     <a href="http://www.club-concorde.org" target="_blank" class="StyleL Style30">http://www.club-concorde.org</a></FONT><br>
@@ -281,20 +95,12 @@ AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/
     <a href="http://le.pointu.free.fr" target=_blank><img src="Images/Pointu.jpg" width="283" height="300" border="0"></a><br>
     <FONT color=#cccccc>Une énorme et fort intéressante revue de presse sur Concorde.</FONT></P>
 <P align=center class="StyleL Style30 Style30 Style30"><FONT color=#cccccc><br>
-      </FONT><FONT color=#cccccc><a href="http://www.fs-tutoriels.com/fr/didac_avions.php" target="_blank" class="StyleL Style30">http://www.fs-tutoriels.com</a></FONT><br>
-        <a href="http://www.fs-tutoriels.com/fr/didac_avions.php" target=_blank><img src="Images/Tuto.jpg" width="428" height="300" border="0"></a><br>
-        <FONT color=#cccccc>Pour les fanas de simulation, les remarquables tutoriaux en Français de Pierre Chassang.</FONT></P>
-<P align=center class="StyleL Style30 Style30 Style30"><FONT color=#cccccc><br>
-              </FONT><FONT color=#cccccc><a href="http://www.concordia-va.com" target="_blank" class="StyleL Style30">http://www.concordia-va.com</a></FONT><br>
-                <a href="http://www.concordia-va.com" target=_blank><img src="Images/Concordia.jpg" width="542" height="300" border="0"></a><br>
-                <span class="Style30 Style30 Style30">Toujours <font color="#cccccc">p</font></span><FONT color=#cccccc>our les fanas de simulation, une compagnie virtuelle équipée d'une flotte de Concorde.</FONT></P>
-<P align=center class="StyleL Style30 Style30 Style30"><FONT color=#cccccc><br>
                         </FONT><a href="http://www.capavenirconcorde.com" target="_blank" class="StyleL">http://www.capavenirconcorde.com</a><br>  
                               <a href="http://www.capavenirconcorde.com" target="_blank"><img src="Images/CapAvenConc.jpg" width="384" height="300" border="0"></a><br>
 Le site de l'association Toulousaine Cap Avenir Concorde.</P>
 <P align=center class="StyleL Style30 Style30 Style30">&nbsp;</P>
-<P align=center class="StyleL Style30 Style30 Style30">  <a href="http://www.mae.org" target="_blank" class="StyleL">http://www.mae.org</a><br>
-  <a href="http://www.mae.org" target="_blank"><img src="Images/MAE.jpg" width="327" height="300" border="0"></a><br>
+<P align=center class="StyleL Style30 Style30 Style30">  <a href="https://www.museeairespace.fr/aller-plus-haut/collections/aerospatiale-bae-concorde-sierra-delta-213-f-btsd-air-france/" target="_blank" class="StyleL">https://www.museeairespace.fr<br>
+  <img src="Images/MAE.jpg" width="327" height="300" border="0"></a><br>
   Le musée de l'air et de l'espace (MAE), qui possède 2 Concordes.</P>
 <P align=center class="StyleL Style30 Style30 Style30">&nbsp;</P>
 <P align=center class="StyleL Style30 Style30 Style30"><a href="http://www.airliners.net" target="_blank" class="StyleL">http://www.airliners.net</a><br>
@@ -307,16 +113,14 @@ Plus d'un million et demi de photos d'avions sur le site Airliners.<br>
   Une très belle collection de photographies aéronautiques<FONT color=#cccccc>.<br>
     (une des photos est utilisée sur la page qui présente le manuel de vol du 201)</FONT></P>
 <P align=center class="StyleL Style30 Style30 Style30">&nbsp;</P>
-<P align=center class="StyleL Style30 Style30 Style30"><span class="Style30 Style30 Style30"><FONT color=#cccccc><span class="Style30 Style30 Style30 Style30"><A href="http://francis.deshayes.free.fr/concorde/index.htm" target=_blank class="StyleL"><U><span class="Style30">http://francis.deshayes.free.fr/concorde/index.htm</span></U></A></span></FONT></span><br>
-    <a href="http://francis.deshayes.free.fr/concorde/index.htm" target="_blank"><img src="Images/SciencesVie1969.jpg" width="354" height="300" border="0"></a><br>
-    <FONT color=#cccccc>Sont reprises sur ce site des pages d'un</FONT><FONT color=#cccccc> Science et Vie, numéro spécial paru au Salon du Bourget en 1969.<br>
-    Petit site, mais contenant des informations fort intéressantes.</FONT></P>
-<P align=center class="StyleL Style30 Style30 Style30">&nbsp;</P>
-<P align=center class="StyleL Style30 Style30 Style30"><span class="Style30 Style30 Style30"><FONT color=#cccccc><span class="Style30 Style30 Style30 Style30"><A href="http://pagesperso-orange.fr/cockpit.francois/Concorde/index.html" target=_blank class="StyleL"><U><span class="Style30">http://pagesperso-orange.fr/cockpit.francois/Concorde/index.html</span></U></A></span></FONT></span><br>
-  <a href="http://pagesperso-orange.fr/cockpit.francois/Concorde/index.html" target="_blank"><img src="Images/Francois.jpg" width="384" height="300" border="0"></a><br>
+<P align=center class="StyleL Style30 Style30 Style30">
+  <span class="Style30 Style30 Style30"><FONT color=#cccccc><span class="Style30 Style30 Style30 Style30"><A href="https://simulateurconcorde.net/" target=_blank class="StyleL"><U><span class="Style30">https://simulateurconcorde.net/</span></U></span></FONT></span><br>
+  <img src="Images/Francois.jpg" width="384" height="300" border="0">
+</a><br>
   Le site de François,<FONT color=#cccccc> qui nous présente les détails de la construction de son simulateur Concorde.<br>
     Avec une minutie extrème, limite</FONT> vétilleux, ce grand passionné nous présente la maquette fonctionnelle de son cockpit.<br>
-En bonus, des informations fort intéressantes sur Concorde. Site incontournable pour les pilotes virtuels.</P>
+En bonus, des informations fort intéressantes sur Concorde. Site incontournable pour les pilotes virtuels.
+</P>
 <P align=center class="StyleL Style30 Style30 Style30">&nbsp;</P>
 <P align=center class="StyleL Style30 Style30 Style30"><a href="http://www.concordescopia.fr/" target="_blank" class="StyleL"><u>http://www.concordescopia.fr<br>
     <img src="Images/PMaz.jpg" width="270" height="300" border="0"><br>
@@ -348,115 +152,9 @@ En bonus, des informations fort intéressantes sur Concorde. Site incontournable
 <!-- InstanceBeginEditable name="ZoneTitre" --><font color="#FFFFFF" style="font-family:Arial;font-size:12pt;font-weight:bold;text-decoration:none;">Mes liens</font><!-- InstanceEndEditable -->
 </div>
 
-<!-- Bandeau -->
-<div id='obj_13' style='position:absolute; left:0px; top:0px; width:960px; height:76px; z-index:7'><img src="/Templates/image_058.jpg" alt="Photo Javier Guerrero" width="960" height="76"></div>
-
+<!-- Bandeau supérieur -->
+<div id="banner"></div>
 <!-- Menu -->
-<div id="apDiv1" style='position:absolute; left:0px; top:79px; width:161px; height:700px; z-index:5; overflow:visible;'>
-  <p align="left"><br>
-  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-  
-<ul id="menu">
-    <li><a href="../../index.php">Accueil</a>
-    <li><a href="../CLprototype001/DocsBordProtos.html">Les premiers Concorde<br>
-    </a>
-      <ul>
-            <li><a href="../CLprototype001/Concorde%20check-list%20prototype%20001_accueil.html">Check-list proto 001</a></li>
-            <li><a href="../Elec201/Concorde201-elec-accueil.html">Manuel électrique <br>1er avion série 201</a></li>
-            <li><a href="../ManuelVol201/ManuelVol201-Accueil.html">Manuel de vol<br>1er avion série 201</a></li>
-      </ul>
-    </li>
-    <li><a href="../CLprototype001/Check-lists%20generalites_267.html" >Les check-list <br>Air France</a>	
-      <ul>
-            <li><a href="../CL-AF/Concorde-CL-normales-lecture.html">Check-list Normales</a></li>
-            <li><a href="../CL-secours/Concorde-Check-list%20secours%20AF-accueil.html">Check-list Secours</a></li>
-            <li><a href="../CL-urgence/Concorde-Check-list%20urgence%20AF-accueil.html">Check-list Urgence</a></li>
-            <li><a href="../CL-QRH/CL-QRH-accueil.html">Check-list QRH</a></li>
-      </ul>
-    </li>
-    <li><a href="../Classeur-TU1/Classeurs%20TU-accueil.html" >Classeurs TU <br>
-      Air France </a>	
-      <ul>
-            <li><a href="../Classeur-TU1/ClasseursTU1-accueil.html">Classeur TU 1</a></li>
-            <li><a href="../Classeur-TU2A/Classeur%20TU2A-accueil.html">Classeur TU 2A </a></li>
-            <li><a href="../Classeur-TU2B/Classeur%20TU2B-accueil.html">Classeur TU 2B </a></li>
-            <li><a href="../TUreduite/TUreduite-accueil.html">Classeur TU réduite</a></li>
-      </ul>
-    </li>
-    <li><a href="../Classeur-ATI/Formation.html" >Formations pilotes</a>	 
-  <ul>
-            <li><a href="../Classeur-ATI/ClasseurATI-accueil.html">Classeur ATI</a></li>
-            <li><a href="../Classeur-ATI/CoursSimul-Accueil.html">Formation simulateur</a></li>
-            <li><a href="../FormationAero/FormationAeroAccueil.html">Formation aérodynamique</a></li>
-            <li><a href="../FormatQualifQuest/QuestionQualif.html">Questionnaire de qualification</a></li>
-      </ul>
-    </li>
-    <li><a href="../FormMeca/FormationMecanos.html" >Formations mécanos</a>	
-  <ul>
-            <li><a href="../FormMeca/FormMecaATA22-3-page01.html">Formation ATA22 commandes de vol automatiques</a></li>
-      </ul>
-    </li>
-    <li><a href="../Carton-A-D/Concorde-Procedures.html" >Préparation des vols</a>	
-  <ul>
-            <li><a href="../ProceduresSolAF/PG-K-46.30/Concorde-Proc46-30-page01.html">Procédure <br>PG-K-46.30 Traitement avion</a></li>
-            <li><a href="../ProceduresSolAF/PG-K-46.32/Concorde-Proc46-32-page01.html">Procédure <br>PG-K-46.32 Chargement/centrage</a></li>
-            <li><a href="../Carton-A-D/carton_decollage_atterrissage_465.html">Carton décollage/ atterrissage Air France</a></li>
-            <li><a href="../Carton-A-D/FormulairePreparationDeVol.html">Formulaire préparation de vol</a></li>
-            <li><a href="../Carton-A-D/ReducBruitCDG.html">Tableau réduction <br> de bruit Paris CDG</a></li>
-            <li><a href="../Carton-A-D/FeuilleCentrage-page01.html">Formulaire feuille <br> de centrage</a></li>
-            <li><a href="../Carton-A-D/OrdreDePleins.html">Formulaire ordre <br>
-        de pleins</a></li>
-      </ul>
-    </li>
-    <li><a href="../Sacoche-SSC-petite/Concorde-Sacoches%20SSC%20Air%20France.html" >Sacoches Air France</a>	
-  <ul>
-            <li><a href="../Sacoche-cuir-grande/Concorde-Sacoche_cuir.html">Grande sacoche cuir</a></li>
-            <li><a href="../Sacoche-SSC-grande/Concorde-Grande%20sacoche%20SSC.html">Grande sacoche SSC</a></li>
-            <li><a href="../Sacoche-SSC-petite/Concorde-Petite%20sacoche%20SSC%20Air%20France.html">Petite sacoche SSC</a></li>
-      </ul>
-    </li>
-    <li><a href="../Cartes/Navigation-accueil.html" >Navigation aérienne</a>	
-  <ul>
-            <li><a href="../RegleCarbu/Concorde%20regle%20carbu%2001.html">Règle de calcul de suivi carburant</a></li>
-        <li><a href="../Cartes/SuiviVol-page1.html">Formulaire générique de suivi de vol</a></li>
-        <li><a href="../Cartes/Carte2SSC.html">Carte 2SSC <br>
-        La manche</a></li>
-        <li><a href="../Cartes/Carte4SSC.html">Carte 4SSC <br>
-        Boucle supersonique</a></li>
-        <li><a href="../Cartes/SuiviVolBoucleSuper.html">Formulaire suivi de vol boucle supersonique</a></li>
-        <li><a href="../Cartes/TerrainCDG-page01.html">Infos Concorde pour le terrain Paris CDG</a></li>
-        <li><a href="../Cartes/TerrainKJFK01-page01.html">Infos Concorde pour le terrain <br>
-        New York JFK</a></li>
-      </ul>
-    </li>
-    <li><a href="../PNC/PNC.html" >Documents PNC </a>	
-  <ul>
-            <li><a href="../PNC/CSbraille/CSbraille-page01.html">Consignes de sécurité en braille</a></li>
-        <li><a href="../PNC/MSS/MSS-page01.html">Manuel sécurité sauvetage MSS</a></li>
-        <li><a href="../Menu/Menu-accueil.html">Menu Concorde </a></li>
-        <li><a href="../Consignes-secu/Concorde-Consignes%20secu%20AF.html">Consignes de sécurité</a></li>
-      </ul>
-    </li>
-    <li><a href="../SpecTech/GeneseConcorde.html" >Génèse Concorde </a>	
-  <ul>
-            <li><a href="../SpecTech/SpecTechAccueil.html">Specification <br>
-        technique 1968 <br></a></li>
-            <li><a href="../SpecTech/VolEssaiJFK.html">Essais à <br>
-        New york 1977 <br></a></li>
-      </ul>
-    </li>
-    <li><a href="Lecture/lecture.html" >Lecture <br>
-    </a>    </li>
-    <li><a href="liens.html" >Liens <br>
-    </a>    </li>
-    <li><a href="Contact.html" >Contact</a></li>
-</ul>
+<div id="menuContent"></div>
 
-</div>
-<script type="text/javascript">
-    initMenu();
-</script>
-
-<!-- InstanceEnd --></html>
-
-
+</html>
